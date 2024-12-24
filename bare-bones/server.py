@@ -5,13 +5,14 @@ Client sends a message to server and gets a response back.
 import socket
 
 
-TCP = False  # UDP if False
+TCP = True  # UDP if False
+ADDRESS = ('0.0.0.0', 8123)
 
 
 if __name__ == '__main__':
     SOCKET_TYPE = socket.SOCK_STREAM if TCP else socket.SOCK_DGRAM
     server = socket.socket(socket.AF_INET, SOCKET_TYPE)
-    server.bind(('127.0.0.1', 8123))
+    server.bind(ADDRESS)
 
     if TCP:
         server.listen(5)  # number of simultananeous connections
