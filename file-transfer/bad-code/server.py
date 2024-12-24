@@ -1,6 +1,6 @@
 """
 Server side socket code.
-Client sends a message to server and gets a response back.
+Client sends data to server.
 """
 import socket
 
